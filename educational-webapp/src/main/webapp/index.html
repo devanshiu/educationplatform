@@ -2,12 +2,85 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>HomePage</title>
-    <link rel="stylesheet" href="style.css"> 
-    <script src="script.js"></script> 
+    <title>Catchy WebApp Name</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: blanchedalmond;
+    }
+    #appTitle {
+      color: rgb(120, 167, 238);
+      text-align: center;
+      padding: 10px;
+    }
+    .dropbtn {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown:hover .dropbtn {
+      background-color: #ffffff;
+    }
+    </style>
   </head>
-  
   <body>
-      <h1> Hello and Welcome to Our Page!</h1>
+      <h1 id="appTitle"> *Catchy WebApp Name*</h1>
+      <nav id="nav-bar">
+        <ul id="all-nav-links">
+            <button onclick="document.location='index.html'">HOME</button>
+            <!-- <li id="nav-link"><a href="index.html">HOME</a></li> -->
+            <div class="dropdown">
+              <button class="dropbtn">ALPHABET</button>
+              <div class="dropdown-content">
+                <a href="#">Learn</a>
+                <a href="#">Play</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">COLORS</button>
+              <div class="dropdown-content">
+                <a href="colors.html">Learn</a>
+                <a href="#">Play</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">NUMBERS</button>
+              <div class="dropdown-content">
+                <a href="#">Learn</a>
+                <a href="#">Play</a>
+              </div>
+            </div>
+        </ul>
+    </nav>
+
   </body>
 </html>
