@@ -15,6 +15,7 @@
       color: rgb(120, 167, 238);
       text-align: center;
       padding: 10px;
+      font-size: 34px;
     }
     .dropbtn {
       background-color: #ffffff;
@@ -22,6 +23,8 @@
       padding: 16px;
       font-size: 16px;
       border: none;
+      padding-right: 48px;
+      padding-left: 48px;
     }
     .dropdown {
       position: relative;
@@ -50,19 +53,26 @@
     .dropdown:hover .dropbtn {
       background-color: #ffffff;
     }
+    .home-button {
+      border: none;
+      font-size: 16px;
+      background-color: white;
+      padding-left: 48px;
+      padding-right: 48px;
+     }
     </style>
   </head>
   <body>
       <h1 id="appTitle"> *Catchy WebApp Name*</h1>
       <nav id="nav-bar">
         <ul id="all-nav-links">
-            <button onclick="document.location='index.html'">HOME</button>
-            <!-- <li id="nav-link"><a href="index.html">HOME</a></li> -->
+            <button class = "home-button" onclick="document.location='index.html'">HOME</button>
+            
             <div class="dropdown">
               <button class="dropbtn">ALPHABET</button>
               <div class="dropdown-content">
                 <a href="#">Learn</a>
-                <a href="#">Play</a>
+                <a href="alphabetGame.html">Play</a>
               </div>
             </div>
             <div class="dropdown">
