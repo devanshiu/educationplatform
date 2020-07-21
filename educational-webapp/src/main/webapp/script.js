@@ -1,3 +1,3 @@
-function onClick(){
-    console.log('Letter');
+function click(){
+    print('Letter');
 }

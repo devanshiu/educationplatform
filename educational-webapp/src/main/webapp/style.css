@@ -109,18 +109,27 @@ a{
 }
 
 #color-game-button {
-    margin-left: 45%;
-    width: 150px;
-    height: 38px;
+    width: 200px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 2rem;
     color: black;
-    background: #ffffff4a;
     transition: background-color 500ms, color 500ms;  
+    background: white;
+    font-family: 'Margarine';
+    margin-bottom: 10%;
+ 
 }
 
 #color-game-button:hover {
     background: #010e04b3;
     color: white;
     transition: background-color 500ms, color 500ms;  
+}
+
+#game-button-container{
+    width: 200px;
+    margin: auto;
 }
 
 .alphabet-container {

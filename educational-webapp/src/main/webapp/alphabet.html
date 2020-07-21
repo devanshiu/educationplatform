@@ -6,6 +6,19 @@
     <link rel="stylesheet" href="style.css"> 
     <script src="script.js"></script> 
   </head>
+
+  <script>
+     var aAudio = new Audio('a.mp3');
+     var bAudio = new Audio('b.mp3');
+     function myAudioFunction(letter) {
+         if(letter == 'a') {
+             aAudio.play();
+         } else if(letter == 'b') {
+             bAudio.play();
+         }
+     }
+ </script>
+ 
   <body id="alphabetBackground">
       <h1 id="appTitle"> *Catchy WebApp Name*</h1>
       <nav id="nav-bar">
@@ -17,7 +30,7 @@
           </ul>
       </nav>
     <div class="alphabet-container">
-        <div class="grid-item"><img id="a" src="images/alphabet/letter-a.png" style="width:50%" onclick="onClick()"></div>
+        <div class="grid-item"><img id="a" src="images/alphabet/letter-a.png" style="width:50%" onclick="click()"></div>
         <div class="grid-item"><img id="b" src="images/alphabet/letter-b.png" style="width:50%"></div>
         <div class="grid-item"><img id="c" src="images/alphabet/letter-c.png" style="width:50%"></div>  
         <div class="grid-item"><img id="d" src="images/alphabet/letter-d.png" style="width:50%"></div>
@@ -43,6 +56,9 @@
         <div class="grid-item"><img id="x" src="images/alphabet/letter-x.png" style="width:50%"></div>
         <div class="grid-item"><img id="y" src="images/alphabet/letter-y.png" style="width:50%"></div>  
         <div class="grid-item"><img id="z" src="images/alphabet/letter-z.png" style="width:50%"></div>
+    </div>
+    <div id="game-button-container">
+      <button id="color-game-button" onclick="location.href='index.html'">Test Me!</button>
     </div>
     </body>
 </html>
