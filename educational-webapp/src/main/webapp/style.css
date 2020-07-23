@@ -195,9 +195,15 @@ a, a:visited {
     text-align: center;
     font-family: 'Margarine';
     font-size: 140%;
-
 }
 
 .home-nav {
     margin-top: 150px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 400px;
 }
