@@ -1,9 +1,10 @@
-/*CSS for Colors Page*/
 @import url(https://fonts.googleapis.com/css?family=Margarine);
 @import url(https://fonts.googleapis.com/css?family=Londrina%20Shadow);
+@import url(https://fonts.googleapis.com/css?family=Londrina%20Solid);
 
+/*CSS for Colors Page*/
 #color-background {
-    background-image: url(images/back.jpg);
+    background-image: url(images/color-page-background.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -12,21 +13,12 @@
     background-blend-mode: lighten;
 }
 
-#alphabetBackground {
-    /*background-color: rgba(66, 214, 237, 0.7); */
-    /* background-image: url(images/alphabet/alphabet-background.jpg); */
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 #appTitle {
     color: black;
     text-align: center;
     padding: 10px;
     font-family: 'Londrina Shadow';
-    font-size: 300%;
+    font-size: 450%;
 }
 
 #title-background {
@@ -43,7 +35,7 @@
     margin: auto;
     padding-bottom: 5px;
     font-family: 'Londrina Shadow';
-    font-size: 25px;
+    font-size: 40px;
 }
 
 #nav-link{
@@ -72,12 +64,10 @@ a, a:visited {
     grid-template-columns: auto auto auto auto;
     padding: 30px;
     color: white;
-
 }
 
 #color-page-backgroundBox {
     border-radius: 2rem;
-    /*background: #f9f4ffe8; */
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 2%;
@@ -90,6 +80,7 @@ a, a:visited {
     padding-bottom: 40%;
     text-align: center;
     font-family: 'Margarine';
+    font-size: 160%;
     box-shadow: 3px 3px 3px #aaaaaa;
     border-bottom-style: solid;
     border-bottom-color: hsla(89, 43%, 10%, 0.3);
@@ -136,10 +127,10 @@ a, a:visited {
     color: white;
 }
 
-#color-game-button {
-    width: 200px;
-    height: 35px;
-    font-size: 20px;
+#game-button {
+    width: 230px;
+    height: 50px;
+    font-size: 30px;
     border-radius: 2rem;
     color: black;
     background: white;
@@ -148,24 +139,10 @@ a, a:visited {
     margin-bottom: 10%;
 }
 
-#color-game-button:hover {
-    background: #010e04b3;
+#game-button:hover {
+    background: #1d1f1ee8;
     color: white;
     transition: background-color 500ms, color 500ms;  
-}
-
-.alphabet-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  text-align: center;
-  padding: 5px;
-}
-
-.grid-item {
-  /* background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgb(255,255,255); */
-  padding: 5px;
-  text-align: center;
 }
 
 #game-button-container{
@@ -175,20 +152,23 @@ a, a:visited {
 
 /*CSS for Home Page*/
 #home-background {
-    background-color: rgba(197, 172, 255, 0.466);
+    background-color: rgba(80, 8, 243, 0.62);
 }
 
 #HomeTitle {
     text-align: center;
-    font-size: 325%;
+    font-size: 450%;
     font-family: 'Londrina Shadow';
+    margin-bottom: 0%;
+    padding-top: 2%;
 }
 
 #home-container {
-    background: rgba(255, 224, 251, 0.45);
-    padding: 15px;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    background: rgba(192, 213, 239, 0.68);
+    margin-bottom: 4%;
+    border-radius: .8rem;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 #purpose-statement {
@@ -201,9 +181,71 @@ a, a:visited {
     margin-top: 150px;
 }
 
+/* CSS for Colors game */
 .grid {
   display: flex;
   flex-wrap: wrap;
   width: 500px;
   height: 400px;
+  font-size: 135%;
+  padding-bottom: 2%;
+}
+
+.fun {
+    font-family: 'Londrina Solid';
+    color: rgba(80, 8, 243, 0.5);
+}
+
+#preview-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-top: 2%;
+    grid-gap: 30px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 4%;
+}
+
+.preview-pic {
+    border-radius: 1rem;
+}
+
+.preview-description {
+    font-family: 'Margarine';
+    font-size: 135%;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#preview-item {
+    text-align: center;
+    background: rgba(192, 213, 239, 0.68);
+    padding-bottom: 2%;
+    padding-top: 4%;
+    border-radius: .8rem;
+}
+
+/*CSS for Alphabet Page*/
+#alphabetBackground {
+    background-image: url(images/alphabet/alphabetBackground.png); 
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.25);
+    background-blend-mode: lighten;
+}
+
+.alphabet-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  text-align: center;
+  padding: 5px;
+}
+
+.grid-item {
+  padding-bottom: 30px;
+  text-align: center;
+  padding-top: 15px;
 }
