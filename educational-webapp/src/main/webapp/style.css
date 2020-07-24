@@ -21,6 +21,15 @@
     background-size: cover;
 }
 
+#colorquiz-background {
+    background-image: url(images/back.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+}
+
 #appTitle {
     color: black;
     text-align: center;
@@ -204,6 +213,6 @@ a, a:visited {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  width: 500px;
-  height: 400px;
+  width: 400px;
+  height: 500px;
 }
