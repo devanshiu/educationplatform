@@ -133,20 +133,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ]
 
+  // randomly assign values to objects and then sort those values
   cardArray.sort(() => 0.5 - Math.random())
 
+  // layout
   const grid = document.querySelector('.grid')
+  // display score
   const resultDisplay = document.querySelector('#result')
-  var cardsChosen = []
-  var cardsChosenId = []
-  const cardsWon = []
+  // create empty lists
+  var cardsSelected = []
+  var cardsSelectedId = []
+  const cardsMatched = []
 
-  //create your board
+  // create your board
   function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
+      // set new attributes 
       var card = document.createElement('img')
+      // set cards face down 
       card.setAttribute('src', 'images/colors/card.png')
       card.setAttribute('data-id', i)
+      // listener "listens" for clicks
       card.addEventListener('click', flipCard)
       grid.appendChild(card)
     }
@@ -155,40 +162,51 @@ document.addEventListener('DOMContentLoaded', () => {
   //check for matches
   function checkForMatch() {
     var cards = document.querySelectorAll('img')
-    const optionOneId = cardsChosenId[0]
-    const optionTwoId = cardsChosenId[1]
+    const optionOneId = cardsSelectedId[0]
+    const optionTwoId = cardsSelectedId[1]
     
+    // check to see if player clicks on the same card twice
     if(optionOneId == optionTwoId) {
+      // leave cards face down  
       cards[optionOneId].setAttribute('src', 'images/colors/card.png')
       cards[optionTwoId].setAttribute('src', 'images/colors/card.png')
-      alert('You have clicked the same image!')
+      alert('You have clicked the same image. Try again!')
     }
-    else if (cardsChosen[0] === cardsChosen[1]) {
-      alert('You found a match')
+
+    // check to see if both cards selected match
+    else if (cardsSelected[0] === cardsSelected[1]) {
+      alert('It is a match!')
+      // replace two cards with a white space when they match
       cards[optionOneId].setAttribute('src', 'images/colors/white.png')
       cards[optionTwoId].setAttribute('src', 'images/colors/white.png')
       cards[optionOneId].removeEventListener('click', flipCard)
       cards[optionTwoId].removeEventListener('click', flipCard)
-      cardsWon.push(cardsChosen)
+      // update list
+      cardsMatched.push(cardsSelected)
     } else {
+      // don't flip cards over if not a match  
       cards[optionOneId].setAttribute('src', 'images/colors/card.png')
       cards[optionTwoId].setAttribute('src', 'images/colors/card.png')
-      alert('Sorry, try again')
+      alert('Sorry, it is not a match. Try again!')
     }
-    cardsChosen = []
-    cardsChosenId = []
-    resultDisplay.textContent = cardsWon.length
-    if  (cardsWon.length === cardArray.length/2) {
-      resultDisplay.textContent = 'Congratulations! You found them all!'
+
+    cardsSelected = []
+    cardsSelectedId = []
+    resultDisplay.textContent = cardsMatched.length
+    // check to see if all cards have been found
+    if  (cardsMatched.length === cardArray.length/2) {
+      resultDisplay.textContent = 'Congrats, you found all the cards!'
     }
   }
 
-  //flip your card
+  // flip card function
   function flipCard() {
     var cardId = this.getAttribute('data-id')
-    cardsChosen.push(cardArray[cardId].name)
-    cardsChosenId.push(cardId)
+    // adds selected cards to list
+    cardsSelected.push(cardArray[cardId].name)
+    cardsSelectedId.push(cardId)
     this.setAttribute('src', cardArray[cardId].img)
+    // user must select two cards
     if (cardsChosen.length ===2) {
       setTimeout(checkForMatch, 500)
     }
