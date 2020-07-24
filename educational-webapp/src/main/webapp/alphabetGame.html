@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="alphabetScript.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
+    <title>Alphabet Soup</title>
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: blanchedalmond;
+        }
+        #appTitle {
+          color: rgb(120, 167, 238);
+          text-align: center;
+          padding: 10px;
+        }
+        .dropbtn {
+          background-color: #ffffff;
+          color: rgb(0, 0, 0);
+          padding: 13px;
+          font-size: 16px;
+          border: none;
+          padding-right: 48px;
+          padding-left: 48px;
+        }
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        .dropdown:hover .dropbtn {
+          background-color: #ffffff;
+        }
+        #alphabetTitle {
+          color: rgb(0, 0, 0);
+          text-align: center;
+          padding: 10px;
+          font-family: 'Bungee Shade';
+          font-size: 34px;
+        }
+        .home-button {
+          border: none;
+          font-size: 16px;
+          background-color: white;
+          padding-left: 48px;
+          padding-right: 48px;
+        }
+        #nav-bar {
+          width: 50%;
+          margin: auto;
+          padding-bottom: 5px;
+        }
+        #all-nav-links{
+          display: flex;
+          padding: 15px;
+          background-color: white;
+          border: 1px solid black;
+          border-radius: .35rem;
+          margin-left: auto;
+          margin-right: auto;
+          list-style-type: none;
+        }
+
+        </style>
+        
+</head>
+<body onload="renderCards()">
+    <h1 id="alphabetTitle">ALPHABET SOUP</h1>
+    <nav id="nav-bar">
+      <ul id="all-nav-links">
+          <button class="home-button" onclick="document.location='index.html'">HOME</button>
+          <div class="dropdown">
+            <button class="dropbtn">ALPHABET</button>
+            <div class="dropdown-content">
+              <a href="#">Learn</a>
+              <a href="alphabetGame.html">Play</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">COLORS</button>
+            <div class="dropdown-content">
+              <a href="colors.html">Learn</a>
+              <a href="#">Play</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">NUMBERS</button>
+            <div class="dropdown-content">
+              <a href="#">Learn</a>
+              <a href="#">Play</a>
+            </div>
+          </div>
+      </ul>
+  </nav>
+
+</body>
+</html>
