@@ -2,95 +2,41 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Catchy WebApp Name</title>
+    
+    <title>Home</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: blanchedalmond;
-    }
-    #appTitle {
-      color: rgb(120, 167, 238);
-      text-align: center;
-      padding: 10px;
-      font-size: 34px;
-    }
-    .dropbtn {
-      background-color: #ffffff;
-      color: rgb(0, 0, 0);
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      padding-right: 48px;
-      padding-left: 48px;
-    }
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-    .dropdown:hover .dropbtn {
-      background-color: #ffffff;
-    }
-    .home-button {
-      border: none;
-      font-size: 16px;
-      background-color: white;
-      padding-left: 48px;
-      padding-right: 48px;
-     }
-    </style>
   </head>
-  <body>
-      <h1 id="appTitle"> *Catchy WebApp Name*</h1>
-      <nav id="nav-bar">
-        <ul id="all-nav-links">
-            <button class = "home-button" onclick="document.location='index.html'">HOME</button>
-            
-            <div class="dropdown">
-              <button class="dropbtn">ALPHABET</button>
-              <div class="dropdown-content">
-                <a href="#">Learn</a>
-                <a href="alphabetGame.html">Play</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn">COLORS</button>
-              <div class="dropdown-content">
-                <a href="colors.html">Learn</a>
-                <a href="#">Play</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn">NUMBERS</button>
-              <div class="dropdown-content">
-                <a href="#">Learn</a>
-                <a href="#">Play</a>
-              </div>
-            </div>
-        </ul>
-    </nav>
+
+  <body id="home-background">
+      <div id="home-container">
+      <h1 id="HomeTitle">Welcome to FUNdamentals!</h1>
+      <p id="purpose-statement"> Where kids can practice early-learning concepts in a fun way 
+      </p> 
+      </div>
+      <nav id="nav-bar" class="home-nav">
+          <ul id="all-nav-links">
+              <li id="nav-link"><a href="index.html">HOME</a></li>
+              <li id="nav-link"><a href="alphabet.html">ALPHABET</a></li>
+              <li id="nav-link"><a href="colors.html">COLORS</a></li>
+              <li id="nav-link">NUMBERS</li>
+          </ul>
+      </nav>
+      <div id="home-container">
+      <h1 id="HomeTitle">Welcome to *Catchy Name*!</h1>
+      <p id="purpose-statement">The purpose of our app is ... </p>
+      <div id="preview-container">
+          <div id="preview-item">
+              <img class="preview-pic" src="images/homepage/alphabetPreview.png" style="width:80%">
+              <div class="preview-description-box"><p class="preview-description">There has never been a better time to learn your ABC's! Click each letter in the alphabet to hear its sounds and then test your knowledge! </p></div></div>
+          <div id="preview-item">
+              <img class="preview-pic" src="images/homepage/colorsPreview.png" style="width:80%">
+              <div class="preview-description-box"><p class="preview-description">Our life is filled with so many fun colors! Go to our color page to learn eight popular colors and then test yourself when you feel ready! </p></div></div>
+          <div id="preview-item">
+              <img class="preview-pic" src="images/homepage/alphabetPreview.png" style="width:80%">
+              <div class="preview-description-box"><p class="preview-description">Learn to count up to the number ten by going to the numbers page! With enough practice, counting will become as easy as one, two, three!  </p></div></div>
+
+      </div>
 
   </body>
 </html>

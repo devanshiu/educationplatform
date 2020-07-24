@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
+    <script src="alphabetScript.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
     <title>Alphabet Soup</title>
     <style>
@@ -82,14 +84,15 @@
           margin-right: auto;
           list-style-type: none;
         }
+
         </style>
+        
 </head>
-<body>
+<body onload="renderCards()">
     <h1 id="alphabetTitle">ALPHABET SOUP</h1>
     <nav id="nav-bar">
       <ul id="all-nav-links">
           <button class="home-button" onclick="document.location='index.html'">HOME</button>
-          <!-- <li id="nav-link"><a href="index.html">HOME</a></li> -->
           <div class="dropdown">
             <button class="dropbtn">ALPHABET</button>
             <div class="dropdown-content">
@@ -113,5 +116,6 @@
           </div>
       </ul>
   </nav>
+
 </body>
 </html>
