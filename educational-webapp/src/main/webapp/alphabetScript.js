@@ -53,6 +53,7 @@ function renderCards() {
     const letters =
       ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
       'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
     const firstLetter = letters[Math.floor(Math.random() * letters.length)];
     const secondLetter = letters[Math.floor(Math.random() * letters.length)];
     const thirdLetter = letters[Math.floor(Math.random() * letters.length)];
@@ -68,7 +69,6 @@ function renderCards() {
     card1.style.position = "relative";
     card1.style.position = "relative";
     card1.style.fontFamily = "Bungee Shade";
-    //card1.addEventListener("click", evaluateResponse(t));
     document.body.appendChild(card1);
 
 
@@ -80,7 +80,6 @@ function renderCards() {
     card2.style.backgroundColor = "rgb(235, 187, 224)";
     card2.style.fontSize = "50px";
     card2.style.fontFamily = "Bungee Shade";
-    //card2.addEventListener("click", evaluateResponse(t));
     document.body.appendChild(card2);
 
     var card3 = document.createElement("BUTTON");
@@ -91,7 +90,6 @@ function renderCards() {
     card3.style.backgroundColor = "rgb(196, 170, 232)";
     card3.style.fontSize = "50px";
     card3.style.fontFamily = "Bungee Shade";
-    //card3.addEventListener("click", evaluateResponse(t));
     document.body.appendChild(card3);
 
     var card4 = document.createElement("BUTTON");
@@ -102,47 +100,51 @@ function renderCards() {
     card4.style.backgroundColor = "rgb(151, 227, 224)";
     card4.style.fontSize = "50px";
     card4.style.fontFamily = "Bungee Shade";
-    //card4.addEventListener("click", evaluateResponse(t));
     document.body.appendChild(card4);
-    //there need to be other checks in place to make sure these randomly selected
-    //do not end up being the same
 
     if(index == 0){
         var t = document.createTextNode(soundHashMap.get(audioChosen));
         card1.removeChild(card1.firstChild);
         card1.appendChild(t);
-        card1.addEventListener('click', evaluateResponse(t));
-
-        
+        card1.addEventListener("click", function(){ evaluateResponse(t, t); });
+        card2.addEventListener("click", function(){ evaluateResponse(second, t); });
+        card3.addEventListener("click", function(){ evaluateResponse(third, t); });
+        card4.addEventListener("click", function(){ evaluateResponse(fourth, t); });
     }
     else if(index == 1){
         var t = document.createTextNode(soundHashMap.get(audioChosen));
         card2.removeChild(card2.firstChild);
         card2.appendChild(t);
-        card2.addEventListener('click', evaluateResponse(t));
+        card1.addEventListener("click", function(){ evaluateResponse(first, t); });
+        card2.addEventListener("click", function(){ evaluateResponse(t, t); });
+        card3.addEventListener("click", function(){ evaluateResponse(third, t); });
+        card4.addEventListener("click", function(){ evaluateResponse(fourth, t); });
     }
     else if(index == 2){
         var t = document.createTextNode(soundHashMap.get(audioChosen));
         card3.removeChild(card3.firstChild);
         card3.appendChild(t);
-        card3.addEventListener('click', evaluateResponse(t));
+        card1.addEventListener("click", function(){ evaluateResponse(first, t); });
+        card2.addEventListener("click", function(){ evaluateResponse(second, t); });
+        card3.addEventListener("click", function(){ evaluateResponse(t, t); });
+        card4.addEventListener("click", function(){ evaluateResponse(fourth, t); });
     }
     else{
         var t = document.createTextNode(soundHashMap.get(audioChosen));
         card4.removeChild(card4.firstChild);
         card4.appendChild(t);
-        card4.addEventListener('click', evaluateResponse(t));
+        card1.addEventListener("click", function(){ evaluateResponse(first, t); });
+        card2.addEventListener("click", function(){ evaluateResponse(second, t); });
+        card3.addEventListener("click", function(){ evaluateResponse(third, t); });
+        card4.addEventListener("click", function(){ evaluateResponse(t, t); });
     }
-
-    document.getElementById("myBtn").addEventListener("click", evaluateResponse(firstLetter));
-
 }
 
-function evaluateResponse(letter) {
-    //I have to get the value that they have clicked on and then check that against
-    //the audio content that was shown
-
-    console.log("what is going on");
-    document.getElementById("demo").innerHTML = Date();
-    console.log(letter);
+function evaluateResponse(letter, answer) {
+    if(letter == answer){
+        alert("Correct!");
+    }
+    else{
+        alert("Incorrect.");
+    }
 }
